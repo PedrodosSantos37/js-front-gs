@@ -25,7 +25,8 @@ export default function Home() {
                 <div>
                 <h2>01</h2>
                 <h4>Monitoramento 24 horas</h4>
-                <p>Monitoramento de oxigênio e batimentos cardíacos 24 horas.</p>
+                <p>Monitoramento de oxigênio e</p>
+                <p>batimentos cardíacos 24 horas.</p>
               </div>
               </div>
               <div className="feature">
