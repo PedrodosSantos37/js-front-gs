@@ -19,39 +19,40 @@ export default function Cadastro() {
         setUsuario({...usuario,[name]:value});
     }
 
-    const handleSubmit = async (e)=>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
+        if (!usuario.nome || !usuario.email || !usuario.senha) {
+            setMsgStatus("Por favor, preencha todos os campos.");
+            return;
+        }
+    
         try {
-            const response = await fetch("http://localhost:5000/usuarios",{
-                method:"POST",
-                headers:{
-                    "Content-Type":"application/json"
+            const response = await fetch("http://localhost:5000/usuarios", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-                body: JSON.stringify(usuario)
+                body: JSON.stringify(usuario),
             });
-
-            if(response.ok){
+            if (response.ok) {
                 setUsuario({
-                    nome:"",
-                    email:"",
-                    senha:""
-
-                })
-
-                setMsgStatus("Cadastro realizado com sucesso!")
-
-                setTimeout(()=>{
-
+                    nome: "",
+                    email: "",
+                    senha: ""
+                });
+    
+                setMsgStatus("Cadastro realizado com sucesso!");
+    
+                setTimeout(() => {
+                    setMsgStatus("");
                 }, 5000);
             }
-            
         } catch (error) {
             console.error(error);
             setMsgStatus("Ocorreu um erro ao tentar realizar o registro!");
         }
-        
-    }
+    };
 
   return (
     <div>
