@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Erro404 from "../src/routes/Erro404"
-import Login from "../src/routes/Login"
-import Cadastro from "../src/routes/Cadastro"
-import Home from "../src/routes/Home"
+import Erro404 from "./routes/Erro404/Erro404.jsx"
+import Login from "./routes/Login/Login.jsx"
+import Cadastro from "./routes/Cadastro/Cadastro.jsx"
+import Home from "./routes/Home/Home.jsx"
 
 const router = createBrowserRouter([
   {path:"/",element: <App/>,errorElement:<Erro404/>,
