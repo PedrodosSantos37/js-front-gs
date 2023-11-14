@@ -66,7 +66,7 @@ export default function Cadastro() {
         <div className="form-cad">
             <form onSubmit={handleSubmit}>
                 <fieldset>
-                    <legend>User Information:</legend>
+                    <legend>Informação do usuário:</legend>
                     <div>
                         <label htmlFor="idNome">Nome:</label>
                         {/*Para o prenchimento é obrigatório adicionar o atributo value e o evento onChange */}
