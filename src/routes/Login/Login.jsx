@@ -3,21 +3,17 @@ import { Link, useNavigate } from "react-router-dom";
 import "../../style/Login.scss";
 
 export default function Login() {
+    document.title = "Login";
 
-    //Criando o Redirecionador!
     const navigate = useNavigate();
 
-    //USE-STATE QUE VAI ARMAZENAR OS DADOS DO FORM.
     const [usuario,setUsuario] = useState({
         email: "",
         senha: ""
     })
 
-    //PREENCHIMENTO DO FORM
     const handleChange = (e)=>{
-        //DESTRUCTURING NOS CAMPOS DO FORM(NAME,INPUT).
         const {name,value} = e.target;
-        //PREENCHENDO O USE-STATE COM OS VALORES DA DESESTRUTURAÇÃO, UTILIZANDO O OPERADOR SPREAD.
         setUsuario({...usuario,[name]:value});
     }
 
@@ -34,24 +30,17 @@ export default function Login() {
             alert("Ocorreu um erro no processamento da sua solicitação!");    
         }
 
-        //REALIZANDO A VALIDAÇÃO DO USUÁRIO.
         for (let x = 0; x < users.length; x++) {
                 user = users[x];
-            //REALIZANDO A COMPARAÇÃO DE FATO!
             if(user.email == usuario.email && user.senha == usuario.senha){
                 alert("Login realizado com SUCESSO!")
 
-                //Criando a autenticação:
-                //Criando o token do usuário
                 const tokenUser = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
                 console.log(tokenUser);
                 
-                //Criando o SessionStorage
                 sessionStorage.setItem("token-user",tokenUser);
-                //Adicionando os dados do Usuário na sessão:
                 sessionStorage.setItem("data-user", JSON.stringify(user));
 
-                //REDIRECIONANDO O USUÁRIO PARA A PÁGINA HOME!
                 navigate("/");
                 return; 
             }
@@ -81,7 +70,7 @@ export default function Login() {
                         <input type="password" name="senha" id="idSenha" placeholder="Digite sua senha." value={usuario.senha} onChange={handleChange}/>
                     </div>
                     <div>
-                        <button>LOGIN</button>
+                        <button>Login</button>
                     </div>
                     <div>
                         <p>Se você ainda não é registrado. <Link to="/cadastrar">CLIQUE AQUI</Link></p>
