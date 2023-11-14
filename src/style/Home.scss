@@ -1,4 +1,11 @@
 // @import "./variaveis.scss";
+.change-div{
+    display: flex;
+    justify-content: space-between;
+    .btn-cabecalho{
+        margin: 30px;
+    }
+}
 
 .container{
     display: grid;
@@ -45,5 +52,14 @@
     }
 }
 
+.container-2{
+    display: flex;
+    justify-content: space-around; 
+    .monitoramento{
+        width: 200px;
+        height: 200px;
+    }
+    
+}
 
 

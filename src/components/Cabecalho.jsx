@@ -16,12 +16,14 @@ export default function Cabecalho() {
     <>
       <header className="cabecalho">
 
-        <div>
-          <button onClick={handleLogout} className={sessionStorage.getItem("token-user") ? "btnLogout":"btn"}>Logout</button>
-        </div>
-        <div className="welcome">
-          <p>{obJUser != null ?  `Olá ${obJUser.name}`:""}</p>
-          <p>{obJUser != null ?  obJUser.email :""}</p>
+        <div className="change-div">
+          <div className="welcome">
+            <p>{obJUser != null ?  `Olá ${obJUser.name}`:""}</p>
+            <p>{obJUser != null ?  obJUser.email :""}</p>
+          </div>
+          <div className="btn-cabecalho">
+            <button onClick={handleLogout} className={sessionStorage.getItem("token-user") ? "btnLogout":"btn"}>Logout</button>
+          </div>
         </div>
       </header>
     </>
