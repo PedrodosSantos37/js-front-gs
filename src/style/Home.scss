@@ -55,11 +55,24 @@
 .container-2{
     display: flex;
     justify-content: space-around; 
+    flex-wrap: wrap;
     .monitoramento{
         width: 200px;
         height: 200px;
+    }
+    .feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px; 
+    }
+      .feature img {
+        max-width: 100px; 
+        margin-right: 20px; 
     }
     
 }
 
 
+
+  
+  

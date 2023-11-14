@@ -20,25 +20,31 @@ export default function Home() {
         </div>
         <h2>Vantagens:</h2>
         <div className="container-2">
-          <div>
-            <img src={Monitoramento} className="monitoramento" />
-            <h2>01</h2>
-            <h4>Monitoramento 24 horas</h4>
-            <p>Monitoramento de oxigênio e batimentos cardíacos 24 horas.</p>
-          </div>
-          <div>
-            <img src={Queda} className="monitoramento" />
-            <h2>02</h2>
-            <h4>Detector de queda</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div>
-            <img src={Relogio} className="monitoramento" />
-            <h2>03</h2>
-            <h4>Lorem, ipsum dolor.</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div> 
+              <div className="feature">
+                <img src={Monitoramento} className="monitoramento" alt="Monitoramento 24 horas" />
+                <div>
+                <h2>01</h2>
+                <h4>Monitoramento 24 horas</h4>
+                <p>Monitoramento de oxigênio e batimentos cardíacos 24 horas.</p>
+              </div>
+              </div>
+              <div className="feature">
+                <img src={Queda} className="monitoramento" alt="Detector de queda" />
+              <div>
+                  <h2>02</h2>
+                  <h4>Detector de queda</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              </div>
+              <div className="feature">
+                <img src={Relogio} className="monitoramento" alt="Relógio portátil" />
+                    <div>
+                      <h2>03</h2>
+                        <h4>Lorem, ipsum dolor.</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
       </>
     )}
   } 
