@@ -1,16 +1,10 @@
+import { Outlet } from "react-router-dom";
 
-function App() {
-
+export default function App() {
 
   return (
     <>
-      <div>
-      </div>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <Outlet/>
     </>
-  )
+  );
 }
-
-export default App
