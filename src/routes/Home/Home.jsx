@@ -41,7 +41,7 @@ export default function Home() {
                 <img src={Relogio} className="monitoramento" alt="Relógio portátil" />
                     <div>
                       <h2>03</h2>
-                        <h4>Lorem, ipsum dolor.</h4>
+                        <h4>Relógio Portátil</h4>
                         <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
