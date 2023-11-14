@@ -50,7 +50,7 @@ export default function Cadastro() {
             console.error(error);
             setMsgStatus("Ocorreu um erro ao tentar realizar o registro!");
         }
-
+        
     }
 
   return (
@@ -59,7 +59,7 @@ export default function Cadastro() {
 
         <h2>{msgStatus}</h2>
 
-        <div className="form-cad">
+        <div className="cadastro-form">
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <legend>Informação do usuário:</legend>
