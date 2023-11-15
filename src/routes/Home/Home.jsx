@@ -10,7 +10,9 @@ export default function Home() {
     if(sessionStorage.getItem("token-user")){
     return (
       <>
-        <Cabecalho/>
+        <div className="header-1">
+          <Cabecalho/>
+        </div>
         <div className="container">
           <header>header1</header>
           <nav>Nav4</nav>
