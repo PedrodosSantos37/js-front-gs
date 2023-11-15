@@ -73,7 +73,7 @@ export default function Login() {
                         <button>Login</button>
                     </div>
                     <div>
-                        <p>Caso você ainda não tenha se cadastrado. <Link to="/cadastrar">CLIQUE AQUI</Link></p>
+                        <p>Você não tem registro? <Link to="/cadastrar">CLIQUE AQUI</Link></p>
                     </div>
                 </fieldset>
             </form>

@@ -10,17 +10,17 @@ export default function Home() {
     if(sessionStorage.getItem("token-user")){
     return (
       <>
-        <div className="header-1">
-          <Cabecalho/>
-        </div>
+        <Cabecalho/>
         <div className="container">
           <header>header1</header>
           <nav>Nav4</nav>
           <h1>H1</h1>
-          <h2>H2</h2>
+          <h3>H3</h3>
           <button>Mais informações</button>
         </div>
-        <h2>Vantagens:</h2>
+        <div className="color"></div> 
+        <div className="space"></div> 
+          <h2>Vantagens:</h2>
         <div className="container-2">
           <div className="feature">
             <img src={Monitoramento} className="monitoramento" alt="Monitoramento 24 horas" />

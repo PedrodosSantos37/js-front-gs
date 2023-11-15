@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Logo from "../assets/logo_saude.png";
 
 export default function Cabecalho() {
 
@@ -15,9 +16,9 @@ export default function Cabecalho() {
   return (
     <>
       <header className="cabecalho">
-
-        <div className="change-div">
-          <div className="welcome">
+      <div className="change-div">
+      <img src={Logo} className="logo" alt="Logo do site" />
+        <div className="welcome">
             <p>{obJUser != null ?  `Olá ${obJUser.name}`:""}</p>
             <p>{obJUser != null ?  obJUser.email :""}</p>
           </div>
