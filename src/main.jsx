@@ -8,11 +8,11 @@ import Cadastro from "./routes/Cadastro/Cadastro.jsx"
 import Home from "./routes/Home/Home.jsx"
 
 const router = createBrowserRouter([
-  {path:"/",element: <App/>,errorElement:<Erro404/>,
+  {path:"/", element: <App/>, errorElement:<Erro404/>,
    children:[
-    {path:"/", element:<Home/>},
-    {path:"/login",element:<Login/>},
-    {path:"/cadastrar",element:<Cadastro/>}
+    {path:"/login", element:<Login/>},
+    {path:"/cadastrar", element:<Cadastro/>},
+    {path:"/", element:<Home/>}
    ] 
  },
 ]);
