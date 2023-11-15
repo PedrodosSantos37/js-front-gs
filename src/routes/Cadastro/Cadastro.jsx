@@ -55,15 +55,10 @@ export default function Cadastro() {
     };
 
   return (
-    <div>
+    <div className="wrapper" >
         <h1>Cadastrar</h1>
-
-        <h2>{msgStatus}</h2>
-
         <div className="cadastro-form">
             <form onSubmit={handleSubmit}>
-                <fieldset>
-                    <legend>Informação do usuário:</legend>
                     <div>
                         <label htmlFor="idNome">Nome:</label>
                         <input type="text" name="nome" id="idNome" placeholder="Digite seu nome." value={usuario.nome} onChange={handleChange}/>
@@ -78,14 +73,13 @@ export default function Cadastro() {
                     </div>
                     <div>
                         <button>Cadastrar</button>
+                        <h2 className="msgStatus">{msgStatus}</h2>
                     </div>
                     <div>
                         <p>Se você já é registrado. <Link to="/login">CLIQUE AQUI</Link></p>
                     </div>
-                </fieldset>
             </form>
         </div>
-
     </div>
   )
 }

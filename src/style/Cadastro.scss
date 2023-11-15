@@ -1,1 +1,13 @@
-// @import "./variaveis.scss";
+@import "./variáveis";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 120px  0 0 0 ; /* Centraliza o formulário horizontalmente */    
+
+
+    input{
+        width: 200px;
+    }
+}

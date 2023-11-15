@@ -54,18 +54,16 @@ export default function Login() {
     }
 
   return (
-    <div>
+    <div className="wrapper-2">
         <h1>Login</h1>
 
         <div className="form-login">
             <form onSubmit={handleSubmit}>
-                <fieldset>
-                    <legend>Informação do Usuário:</legend>
-                    <div>
+                    <div className="input-box">
                         <label htmlFor="idEmail">Email:</label>
                         <input type="email" name="email" id="idEmail" placeholder="Digite seu email." value={login.email} onChange={handleChange}/>
                     </div>
-                    <div>
+                    <div className="input-box">
                         <label htmlFor="idSenha">Senha:</label>
                         <input type="password" name="senha" id="idSenha" placeholder="Digite sua senha." value={login.senha} onChange={handleChange}/>
                     </div>
@@ -75,7 +73,6 @@ export default function Login() {
                     <div>
                         <p>Você não tem registro? <Link to="/cadastrar">CLIQUE AQUI</Link></p>
                     </div>
-                </fieldset>
             </form>
         </div>
 

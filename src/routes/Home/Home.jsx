@@ -20,12 +20,12 @@ export default function Home() {
         </div>
         <div className="color"></div> 
         <div className="space"></div> 
-          <h2>Vantagens:</h2>
+          <h2 className="vantagem">Vantagens:</h2>
         <div className="container-2">
           <div className="feature">
             <img src={Monitoramento} className="monitoramento" alt="Monitoramento 24 horas" />
             <div>
-              <h2>01</h2>
+              <h2 className="vantagem">01</h2>
               <h4>Monitoramento 24 horas</h4>
               <p>Monitoramento de oxigênio e</p>
               <p>batimentos cardíacos 24 horas.</p>
@@ -34,7 +34,7 @@ export default function Home() {
             <div className="feature">
               <img src={Queda} className="monitoramento" alt="Detector de queda" />
               <div>
-                <h2>02</h2>
+                <h2 className="vantagem">02</h2>
                 <h4>Detector de queda</h4>
                 <p>Avisa ao hospital em tempo</p>
                 <p> real se houver uma queda.</p>
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="feature">
               <img src={Relogio} className="monitoramento" alt="Relógio portátil" />
               <div>
-                <h2>03</h2>
+                <h2 className="vantagem">03</h2>
                 <h4>Relógio Portátil</h4>
                 <p>Integra os sensores dentro</p>
                 <p>de um relógio inteligente.</p>
