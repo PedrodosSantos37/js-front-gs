@@ -7,14 +7,14 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-    const [usuario,setUsuario] = useState({
+    const [login,setLogin] = useState({
         email: "",
         senha: ""
     })
 
     const handleChange = (e)=>{
         const {name,value} = e.target;
-        setUsuario({...usuario,[name]:value});
+        setLogin({...login,[name]:value});
     }
 
     const handleSubmit = async (e)=>{
@@ -32,7 +32,7 @@ export default function Login() {
 
         for (let x = 0; x < users.length; x++) {
                 user = users[x];
-            if(user.email == usuario.email && user.senha == usuario.senha){
+            if(user.email == login.email && user.senha == login.senha){
                 alert("Login realizado com SUCESSO!")
 
                 const tokenUser = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
@@ -47,7 +47,7 @@ export default function Login() {
         }
 
         alert("Login ou senha incorretos!")
-        setUsuario({
+        setLogin({
             email:"",
             senha:""
         });
@@ -63,17 +63,17 @@ export default function Login() {
                     <legend>Informação do Usuário:</legend>
                     <div>
                         <label htmlFor="idEmail">Email:</label>
-                        <input type="email" name="email" id="idEmail" placeholder="Digite seu email." value={usuario.email} onChange={handleChange}/>
+                        <input type="email" name="email" id="idEmail" placeholder="Digite seu email." value={login.email} onChange={handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="idSenha">Senha:</label>
-                        <input type="password" name="senha" id="idSenha" placeholder="Digite sua senha." value={usuario.senha} onChange={handleChange}/>
+                        <input type="password" name="senha" id="idSenha" placeholder="Digite sua senha." value={login.senha} onChange={handleChange}/>
                     </div>
                     <div>
                         <button>Login</button>
                     </div>
                     <div>
-                        <p>Se você ainda não é registrado. <Link to="/cadastrar">CLIQUE AQUI</Link></p>
+                        <p>Caso você ainda não tenha se cadastrado. <Link to="/cadastrar">CLIQUE AQUI</Link></p>
                     </div>
                 </fieldset>
             </form>

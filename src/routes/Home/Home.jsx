@@ -34,7 +34,8 @@ export default function Home() {
               <div>
                 <h2>02</h2>
                 <h4>Detector de queda</h4>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Avisa ao hospital em tempo</p>
+                <p> real se houver uma queda.</p>
               </div>
             </div>
             <div className="feature">
@@ -42,7 +43,8 @@ export default function Home() {
               <div>
                 <h2>03</h2>
                 <h4>Relógio Portátil</h4>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Integra os sensores dentro</p>
+                <p>de um relógio inteligente.</p>
               </div>
             </div>
         </div>
