@@ -59,11 +59,11 @@ export default function Login() {
 
         <div className="form-login">
             <form onSubmit={handleSubmit}>
-                    <div className="input-box">
+                    <div className="input-box-2">
                         <label htmlFor="idEmail">Email:</label>
                         <input type="email" name="email" id="idEmail" placeholder="Digite seu email." value={login.email} onChange={handleChange}/>
                     </div>
-                    <div className="input-box">
+                    <div className="input-box-2">
                         <label htmlFor="idSenha">Senha:</label>
                         <input type="password" name="senha" id="idSenha" placeholder="Digite sua senha." value={login.senha} onChange={handleChange}/>
                     </div>

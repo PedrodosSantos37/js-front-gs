@@ -59,15 +59,15 @@ export default function Cadastro() {
         <h1>Cadastrar</h1>
         <div className="cadastro-form">
             <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className="input-box">
                         <label htmlFor="idNome">Nome:</label>
                         <input type="text" name="nome" id="idNome" placeholder="Digite seu nome." value={usuario.nome} onChange={handleChange}/>
                     </div>
-                    <div>
+                    <div className="input-box">
                         <label htmlFor="idEmail">Email:</label>
                         <input type="email" name="email" id="idEmail" placeholder="Digite seu email." value={usuario.email} onChange={handleChange}/>
                     </div>
-                    <div>
+                    <div className="input-box">
                         <label htmlFor="idSenha">Senha:</label>
                         <input type="password" name="senha" id="idSenha" placeholder="Digite sua senha." value={usuario.senha} onChange={handleChange}/>
                     </div>
