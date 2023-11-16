@@ -3,6 +3,7 @@ import Cabecalho from "../../components/Cabecalho.jsx";
 import Monitoramento from "../../assets/sensor_de_monitoramento.png";
 import Queda from "../../assets/sensor_de_queda.png";
 import Relogio from "../../assets/relogio_portatil.png";
+import SmartWatch from "../../assets/smartwatch.png";
 
 export default function Home() {
     document.title = "Home";
@@ -12,10 +13,13 @@ export default function Home() {
       <>
         <Cabecalho/>
         <div className="container">
-          <header>header1</header>
-          <nav>Nav4</nav>
-          <h1>H1</h1>
-          <h3>H3</h3>
+          <img src={SmartWatch} className="smartWatch" alt="Relógio portátil" />
+          <nav><div className="word">Lorem ipsum dolor sit amet.</div>
+          <div className="word">Lorem ipsum dolor sit amet.</div>
+          <div className="word">Lorem ipsum dolor sit amet.</div></nav>
+          <h1><p>InterWatch</p>
+          <p>Saúde</p></h1>
+          <article><div className="word-3">Lorem ipsum dolor sit amet.</div></article>
           <button>Mais informações</button>
         </div>
         <div className="color"></div> 
