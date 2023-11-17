@@ -14,8 +14,18 @@ body {
         display: flex;
         justify-content: space-between;
         
+        
         .welcome{
-            margin: 8px 0 0 -820px;
+            display: flex;
+            flex-direction: row;
+
+            .mudanca{
+                margin: 17px 0 0 10px;
+                @media screen and (max-width: 404px) {
+                    font-size: 12px;
+                    margin-top: 25px;
+                }
+            }
         }
 
         .logo{
@@ -31,6 +41,13 @@ body {
             button{
                 background-color: $bg-color-content2;
                 color: #fff;
+                display: flex;
+
+                @media screen and (max-width: 404px) {
+                    font-size: 8px;
+                    margin-top: 5px; 
+                    width: 40px;
+                }
 
                 &:hover{
                     background-color: #f1f1f1;
