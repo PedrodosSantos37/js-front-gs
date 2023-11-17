@@ -41,7 +41,6 @@ body {
             button{
                 background-color: $bg-color-content2;
                 color: #fff;
-                display: flex;
 
                 @media screen and (max-width: 404px) {
                     font-size: 8px;
