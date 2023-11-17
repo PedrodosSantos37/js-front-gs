@@ -13,14 +13,19 @@ export default function Home() {
       <>
         <Cabecalho/>
         <div className="container">
+          <div className="interWatch">
           <img src={SmartWatch} className="smartWatch" alt="Relógio portátil" />
+          </div>
           <nav><div className="word">Lorem ipsum dolor sit amet.</div>
           <div className="word">Lorem ipsum dolor sit amet.</div>
           <div className="word">Lorem ipsum dolor sit amet.</div></nav>
-          <h1><p>InterWatch</p>
-          <p>Saúde</p></h1>
-          <article><div className="word-3">Lorem ipsum dolor sit amet.</div></article>
-          <button>Mais informações</button>
+          <div className="h1-word">
+          <h1>InterWatch <br /> Saúde</h1>
+          </div>
+          <div className="article-btn">
+            <article><div className="word-3">Lorem ipsum dolor sit amet.</div></article>
+            <button>Mais informações</button>
+          </div>
         </div>
         <div className="color"></div> 
         <div className="space"></div> 
@@ -31,8 +36,7 @@ export default function Home() {
             <div>
               <h2 className="vantagem">01</h2>
               <h4>Monitoramento 24 horas</h4>
-              <p>Monitoramento de oxigênio e</p>
-              <p>batimentos cardíacos 24 horas.</p>
+              <p>Monitoramento de oxigênio e <br /> batimentos cardíacos 24 horas.</p>
             </div>
           </div>
             <div className="feature">
@@ -40,8 +44,7 @@ export default function Home() {
               <div>
                 <h2 className="vantagem">02</h2>
                 <h4>Detector de queda</h4>
-                <p>Avisa ao hospital em tempo</p>
-                <p> real se houver uma queda.</p>
+                <p>Avisa ao hospital em tempo <br /> real se houver uma queda.</p>
               </div>
             </div>
             <div className="feature">
@@ -49,8 +52,7 @@ export default function Home() {
               <div>
                 <h2 className="vantagem">03</h2>
                 <h4>Relógio Portátil</h4>
-                <p>Integra os sensores dentro</p>
-                <p>de um relógio inteligente.</p>
+                <p>Integra os sensores dentro <br/> de um relógio inteligente.</p>
               </div>
             </div>
         </div>
