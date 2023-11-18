@@ -4,22 +4,21 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-  }
+}
 
-.cabecalho{
+.cabecalho {
     background-color: $color-text-2;
-    color: #fff; 
+    color: #fff;
 
-    .change-div{
+    .change-div {
         display: flex;
         justify-content: space-between;
-        
-        
-        .welcome{
+
+        .welcome {
             display: flex;
             flex-direction: row;
 
-            .mudanca{
+            .mudanca {
                 margin: 17px 0 0 10px;
                 @media screen and (max-width: 404px) {
                     font-size: 12px;
@@ -28,7 +27,7 @@ body {
             }
         }
 
-        .logo{
+        .logo {
             width: 100px;
             height: 100px;
             margin: 0 0 4px 30px;
@@ -36,21 +35,22 @@ body {
             border-radius: 4px;
         }
 
-        .btn-cabecalho{
-            margin: 40px 20px 0 0;
-            button{
+        .btn-cabecalho {
+            margin: 40px 35px 0 0;
+
+            button {
                 background-color: $bg-color-content2;
                 color: #fff;
 
                 @media screen and (max-width: 404px) {
                     font-size: 8px;
-                    margin-top: 5px; 
+                    margin-top: 5px;
                     width: 40px;
                 }
 
-                &:hover{
+                &:hover {
                     background-color: #f1f1f1;
-                    color: black
+                    color: black;
                 }
             }
         }
@@ -92,6 +92,18 @@ body {
             margin-top: 10px;
         }
 
+        @media screen and (max-width: 1124px) {
+            grid-row: 1 / 4;
+            grid-column: 3 / 4;
+            width: 290px;
+        }
+
+        @media screen and (max-width: 1080px) {
+            grid-row: 1 / 4;
+            grid-column: 3 / 4;
+            width: 250px;
+        }
+
         @media screen and (max-width: 1024px) {
             grid-column: 1 / 5;
             grid-row: auto;
@@ -121,13 +133,28 @@ body {
             background-color: #f1f1f1;
 
             @media screen and (max-width: 1163px) {
-                grid-row: 3 / 4;
+                grid-row: 2 / 3;
                 width: 160px;
+                margin: 0 auto;
+                margin-top: 50px;
             }
+
             @media screen and (max-width: 1024px) {
                 .h1-word {
-                    margin: 17px 0 0 1em;
+                    grid-row: 2 / 5;
+                    width: 130px;
+                    margin-top: 50px;
                 }
+            }
+
+            @media screen and (max-width: 665px) {
+                width: 100%;
+                margin-top: 60px;
+            }
+
+            @media screen and (max-width: 320px) {
+                width: 280px;
+                margin-top: 60px;
             }
         }
     }
@@ -156,11 +183,6 @@ body {
                 margin-top: 10px;
             }
 
-            // @media screen and (max-width: 1024px) {
-            //     width: 100%;
-            //     grid-row: auto;
-            // }
-
             @media screen and (max-width: 665px) {
                 width: 100%;
                 grid-row: auto;
@@ -168,7 +190,7 @@ body {
         }
 
         button {
-            width: 120px;
+            width: 125px;
             border-radius: 2px;
             background-color: $color-text-2;
             color: $bg-color-content;
@@ -208,12 +230,13 @@ body {
     }
 }
 
-.color{
+.color {
     background-color: #f1f1f1;
     width: 100%;
-    height: 9px; 
+    height: 9px;
 }
-.space{
+
+.space {
     background-color: $bg-color-content2;
     width: 100%;
     height: 9px;
@@ -221,41 +244,37 @@ body {
 
 .vantagem {
     background-color: #f1f1f1;
-    margin: 0; 
+    margin: 0;
     padding: 20px;
-    height: auto; 
+    height: auto;
 }
 
-.container-2{
+.container-2 {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     flex-wrap: wrap;
     background-color: #f1f1f1;
 
-    .monitoramento{
+
+    .monitoramento {
         width: 200px;
         height: 200px;
-        max-width: 100px; 
-        margin-right: 20px; 
+        max-width: 100px;
+        margin-right: 20px;
     }
 
     .feature {
         display: flex;
         align-items: center;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
     }
 
-    h4{
+    h4 {
         color: $color-text-2;
         font-weight: bold;
     }
 
-    p{
+    p {
         color: gray;
-    } 
+    }
 }
-
-
-
-  
-  
