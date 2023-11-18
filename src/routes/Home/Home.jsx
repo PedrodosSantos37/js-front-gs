@@ -17,8 +17,8 @@ export default function Home() {
           <img src={SmartWatch} className="smartWatch" alt="Relógio portátil" />
           </div>
           
-          <nav><div className="word"> <b> O que é a solução? </b> <br /> O  InterWatch Health é uma pulseira com sensores, incluindo medidor de batimentos, oxigênio e acelerômetro, projetada para monitorar pacientes em lista de espera por transplantes, oferecendo dados contínuos.</div> <br />
-          <div className="word"> <b> O que ela fará? </b> <br /> A pulseira monitora constantemente a frequência cardíaca e oxigenação do sangue, mitigando desafios emocionais dos pacientes em espera por transplantes e fornecendo lembretes programáveis para medicamentos ou consultas.</div> <br />
+          <nav><div className="word"> <b> O que é a solução? </b> <br /> O  InterWatch Health é uma pulseira com sensores, incluindo medidor de batimentos, oxigênio e acelerômetro, projetada para monitorar pacientes em lista de espera por transplantes, oferecendo dados contínuos.</div> <br /> <hr />
+          <div className="word"> <b> O que ela fará? </b> <br /> A pulseira monitora constantemente a frequência cardíaca e oxigenação do sangue, mitigando desafios emocionais dos pacientes em espera por transplantes e fornecendo lembretes programáveis para medicamentos ou consultas.</div> <br /> <hr />
           <div className="word"> <b> Como funcionará? </b> <br /> Com base em sensores integrados, a pulseira coleta dados vitais em tempo real. Algoritmos matemáticos, como integral e derivada, são aplicados para prever eventos relevantes, enquanto a inteligência artificial detecta padrões, alertando sobre possíveis irregularidades e tomando medidas necessárias.</div></nav>
           <div className="h1-word">
           <h1>InterWatch <br /> Saúde</h1>
