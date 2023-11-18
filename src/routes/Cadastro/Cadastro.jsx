@@ -76,7 +76,7 @@ export default function Cadastro() {
                         <h2 className="msgStatus">{msgStatus}</h2>
                     </div>
                     <div>
-                        <p>Se você já é registrado. <Link to="/login">CLIQUE AQUI</Link></p>
+                        <p>Se você já é registrado. <Link to="/login">Logui aqui!</Link></p>
                     </div>
             </form>
         </div>

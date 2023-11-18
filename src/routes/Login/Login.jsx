@@ -71,7 +71,7 @@ export default function Login() {
                         <button>Login</button>
                     </div>
                     <div>
-                        <p>Você não tem registro? <Link to="/cadastrar">CLIQUE AQUI</Link></p>
+                        <p>Você não tem registro? <Link to="/cadastrar">Cadastre aqui!</Link></p>
                     </div>
             </form>
         </div>
