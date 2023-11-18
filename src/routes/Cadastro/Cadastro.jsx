@@ -8,7 +8,7 @@ export default function Cadastro() {
 
     const [msgStatus, setMsgStatus] = useState("");
     
-    const [usuario,setUsuario] = useState({
+    const [cadastro,setCadastro] = useState({
         nome:"",
         email: "",
         senha: ""
@@ -16,13 +16,25 @@ export default function Cadastro() {
 
     const handleChange = (e)=>{
         const {name,value} = e.target;
-        setUsuario({...usuario,[name]:value});
+        setCadastro({...cadastro,[name]:value});
     }
+
+    const handleFocus = (e) => {
+        e.target.classList.add("slide-up", "active");
+        e.target.nextElementSibling.classList.add("fade-in");
+      };
+    
+      const handleBlur = (e) => {
+        if (!e.target.value) {
+          e.target.classList.remove("slide-up", "active");
+          e.target.nextElementSibling.classList.remove("fade-in");
+        }
+      };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
     
-        if (!usuario.nome || !usuario.email || !usuario.senha) {
+        if (!cadastro.nome || !cadastro.email || !cadastro.senha) {
             setMsgStatus("Por favor, preencha todos os campos.");
             return;
         }
@@ -33,10 +45,10 @@ export default function Cadastro() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(usuario),
+                body: JSON.stringify(cadastro),
             });
             if (response.ok) {
-                setUsuario({
+                setCadastro({
                     nome: "",
                     email: "",
                     senha: ""
@@ -59,17 +71,17 @@ export default function Cadastro() {
         <h1>Cadastrar</h1>
         <div className="cadastro-form">
             <form onSubmit={handleSubmit}>
-                    <div className="input-box">
-                        <label htmlFor="idNome">Nome:</label>
-                        <input type="text" name="nome" id="idNome" placeholder="Digite seu nome." value={usuario.nome} onChange={handleChange}/>
+                        <div className={`input-box ${cadastro.nome ? "active" : ""}`}>
+                        <label htmlFor="idNome" className={cadastro.nome ? "slide-up" : ""}>Nome</label>
+                        <input type="text" name="nome" id="idNome" value={cadastro.nome} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}/>
                     </div>
-                    <div className="input-box">
-                        <label htmlFor="idEmail">Email:</label>
-                        <input type="email" name="email" id="idEmail" placeholder="Digite seu email." value={usuario.email} onChange={handleChange}/>
+                    <div className={`input-box ${cadastro.email ? "active" : ""}`}>
+                    <label htmlFor="idEmail" className={cadastro.email ? "slide-up" : ""}>Email</label>
+                    <input type="email" name="email" id="idEmail" value={cadastro.email} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}/>
                     </div>
-                    <div className="input-box">
-                        <label htmlFor="idSenha">Senha:</label>
-                        <input type="password" name="senha" id="idSenha" placeholder="Digite sua senha." value={usuario.senha} onChange={handleChange}/>
+                    <div className={`input-box ${cadastro.senha ? "active" : ""}`}>
+                    <label htmlFor="idSenha" className={cadastro.senha ? "slide-up" : ""}>Senha</label>
+                    <input type="password" name="senha" id="idSenha" value={cadastro.senha} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}/>
                     </div>
                     <div>
                         <button>Cadastrar</button>
