@@ -1,6 +1,7 @@
 import "../../style/Cadastro.scss"
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import Logo2 from "../../assets/logo_preto_branco.png"
 
 
 export default function Cadastro() {
@@ -60,6 +61,7 @@ export default function Cadastro() {
                     setMsgStatus("");
                 }, 5000);
             }
+            
         } catch (error) {
             console.error(error);
             setMsgStatus("Ocorreu um erro ao tentar realizar o registro!");
@@ -67,31 +69,36 @@ export default function Cadastro() {
     };
 
   return (
-    <div className="wrapper" >
-        <h1>Cadastrar</h1>
+    <>
+    <body>
+        <div>
+            <img src={Logo2} className="logo_preto_branco" alt="Logo preto e branco" />
+        </div>
         <div className="cadastro-form">
+            <h1>Cadastrar</h1>
+            <h2 className="msgStatus">{msgStatus}</h2>
             <form onSubmit={handleSubmit}>
-                        <div className={`input-box ${cadastro.nome ? "active" : ""}`}>
+                    <div className={`input-box ${cadastro.nome ? "active" : ""}`}>
                         <label htmlFor="idNome" className={cadastro.nome ? "slide-up" : ""}>Nome</label>
                         <input type="text" name="nome" id="idNome" value={cadastro.nome} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}/>
                     </div>
                     <div className={`input-box ${cadastro.email ? "active" : ""}`}>
-                    <label htmlFor="idEmail" className={cadastro.email ? "slide-up" : ""}>Email</label>
-                    <input type="email" name="email" id="idEmail" value={cadastro.email} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}/>
+                        <label htmlFor="idEmail" className={cadastro.email ? "slide-up" : ""}>Email</label>
+                        <input type="email" name="email" id="idEmail" value={cadastro.email} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}/>
                     </div>
                     <div className={`input-box ${cadastro.senha ? "active" : ""}`}>
-                    <label htmlFor="idSenha" className={cadastro.senha ? "slide-up" : ""}>Senha</label>
-                    <input type="password" name="senha" id="idSenha" value={cadastro.senha} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}/>
+                        <label htmlFor="idSenha" className={cadastro.senha ? "slide-up" : ""}>Senha</label>
+                        <input type="password" name="senha" id="idSenha" value={cadastro.senha} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}/>
                     </div>
                     <div>
                         <button>Cadastrar</button>
-                        <h2 className="msgStatus">{msgStatus}</h2>
                     </div>
                     <div>
                         <p>Se você já é registrado. <Link to="/login">Logui aqui!</Link></p>
                     </div>
             </form>
         </div>
-    </div>
+      </body>
+    </>
   )
 }

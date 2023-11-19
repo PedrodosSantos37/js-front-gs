@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../style/Login.scss";
+import Logo2 from "../../assets/logo_preto_branco.png"
 
 export default function Login() {
   document.title = "Login";
@@ -66,10 +67,13 @@ export default function Login() {
   };
 
   return (
-    <div className="wrapper-2">
+    <>
+    <body>
+        <div>
+          <img src={Logo2} className="logo_preto_branco" alt="Logo preto e branco" />
+        </div>
+      <div className="form-login">
         <h1>Login</h1>
-
-        <div className="form-login">
             <form onSubmit={handleSubmit}>
                         <div className={`input-box-2 ${login.email ? "active" : ""}`}>
                         <label htmlFor="idEmail" className={login.email ? "slide-up" : ""}>Email</label>
@@ -87,7 +91,7 @@ export default function Login() {
                     </div>
             </form>
         </div>
-
-    </div>
+    </body>
+    </>
   )
 }
