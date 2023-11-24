@@ -2,7 +2,7 @@
 
 Este guia destina-se às disciplinas de Web-front na GS em 2023.
 
-## Site versionado
+## Site com deploy
 Link: https://6560f650593b111a649a548c--delightful-stardust-c72c98.netlify.app/
 
 ## Passo a passo para iniciar o projeto pelo Visual Studio Code
