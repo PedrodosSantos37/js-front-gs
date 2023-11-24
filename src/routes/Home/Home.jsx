@@ -1,9 +1,9 @@
 import "../../style/Home.scss"
 import { useNavigate } from "react-router-dom";
 import Cabecalho from "../../components/Cabecalho.jsx";
-import Monitoramento from "../../assets/sensor_de_monitoramento.png";
+import Monitoramento from "../../assets/monitoramento.png";
 import Queda from "../../assets/sensor_de_queda.png";
-import Relogio from "../../assets/relogio_portatil.png";
+import Relogio from "../../assets/inter.png";
 import SmartWatch from "../../assets/smartwatch.png";
 import { useEffect } from "react";
 
