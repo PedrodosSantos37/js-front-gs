@@ -1,16 +1,28 @@
 import "../../style/Home.scss"
+import { useNavigate } from "react-router-dom";
 import Cabecalho from "../../components/Cabecalho.jsx";
 import Monitoramento from "../../assets/sensor_de_monitoramento.png";
 import Queda from "../../assets/sensor_de_queda.png";
 import Relogio from "../../assets/relogio_portatil.png";
 import SmartWatch from "../../assets/smartwatch.png";
+import { useEffect } from "react";
 
-export default function Home() {
-    document.title = "Home";
-    
-    if(sessionStorage.getItem("token-user")){
+export default function Home(){
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    if (!sessionStorage.getItem("token-user")) {
+      alert("Token não encontrado. Por favor, faça o login!");
+      navigate("/login");
+    }
+  }, [navigate]);
+
+ 
+ 
     return (
       <>
+      {sessionStorage.getItem("token-user") ?
+        <>
         <Cabecalho/>
         <div className="container">
           <div className="interWatch">
@@ -57,6 +69,9 @@ export default function Home() {
               </div>
             </div>
         </div>
+        </>
+      :
+        <h2>Você não está autorizado. Por favor, faça o login para acessar.</h2>
+      } 
       </>
     )}
-  } 

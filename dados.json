@@ -299,6 +299,12 @@
       "email": "pandorasouza@icloud.edu",
       "name": "Pandora Souza",
       "senha": "Donec"
+    },
+    {
+      "nome": "Pedro",
+      "email": "rm552047@fiap.com",
+      "senha": "1234567",
+      "id": 51
     }
   ]
 }
